@@ -4,7 +4,7 @@ Predict whether a shawarma lover will **churn** 🌯 or **stay** ❤️
 Built using **XGBoost**, **Scikit-learn**, and **Streamlit**.
 
 ## 🚀 Live Demo
-[Launch App on Streamlit](https://share.streamlit.io/YOUR_LINK_HERE)
+[Launch App on Streamlit][(https://share.streamlit.io/YOUR_LINK_HERE](https://fares-shawrma-churn-app.streamlit.app/))
 
 ## 🧠 Tech Stack
 - Python (pandas, numpy, scikit-learn, xgboost)
