@@ -1,0 +1,24 @@
+{
+  "name": "Data Science Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-python.vscode-pylance",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.terminal.activateEnvironment": true
+      }
+    }
+  },
+  "forwardPorts": [8888, 8501],
+  "postCreateCommand": "pip install --upgrade pip && pip install -r /workspace/requirements.txt",
+  "remoteUser": "root"
+}
