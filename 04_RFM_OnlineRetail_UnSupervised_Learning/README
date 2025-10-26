@@ -1,1 +1,5 @@
+📂 Data
+This project uses the [Online Retail II UCI](https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci).
+Download and place it in the `data/` folder before running.
+Contains 1,067,371 rows x 8 columns.
 
