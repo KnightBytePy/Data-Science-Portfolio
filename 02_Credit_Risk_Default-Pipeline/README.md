@@ -27,10 +27,15 @@ In real lending, this type of model is used to:
 * assign customers to manual review / enhanced KYC
 
 ---
+
 📂 Data
+
 This project uses the [Home Credit Default Risk](https://www.kaggle.com/c/home-credit-default-risk/data)
+
 Download and place it in the `data/` folder before running.
+
 ---
+
 ## 🧠 Methodology / Pipeline
 
 ### 1. Data Loading & Inspection
