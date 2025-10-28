@@ -162,50 +162,9 @@ Interpretation:
   * debt load relative to income,
   * bureau-like risk scores.
 
-These are exactly the variables credit policy teams look at in production.
-
 ---
 
-## 💾 Model Export / Deployment Notes
-
-We export:
-
-* `xgb_model.pkl` → trained XGBoost classifier
-* `feature_columns.pkl` → the exact column order after preprocessing
-
-Why this matters:
-
-* In deployment you *must* feed features in the same order with the same encoded column names.
-* Having both the model and feature list makes it easy to plug into:
-
-  * a Streamlit app,
-  * a Flask/FastAPI scoring API,
-  * or batch inference in production.
-
-Minimal loading example:
-
-```python
-import joblib
-import pandas as pd
-
-model = joblib.load("xgb_model.pkl")
-feature_cols = joblib.load("feature_columns.pkl")
-
-# new_applicant_df = ...  # build a single-row dataframe
-# new_applicant_df = new_applicant_df.reindex(columns=feature_cols, fill_value=0)
-
-# proba = model.predict_proba(new_applicant_df)[:, 1][0]
-# print("Estimated default probability:", proba)
-```
-
----
-
-## ⚠️ Notes on Explainability
-
-Regulated credit scoring normally requires explainability (for compliance and fairness review).
-We attempted SHAP for per-feature attributions but ran into environment/version issues (not unusual on Windows without build tools).
-
-Planned next step:
+## ⚠️ Planned next step:
 
 * Add SHAP summary plots and per-row force plots for "reason codes" (e.g. *"High credit amount vs income"*).
 * Add a fairness slice analysis (compare false positive rate by gender / age bucket).
@@ -221,8 +180,6 @@ Planned next step:
 * Evaluated with ROC-AUC instead of just accuracy (important in imbalanced credit problems).
 * Exported the production model and its schema for deployment.
 
-This notebook represents the kind of work done in credit risk modeling / fintech underwriting / lending analytics teams.
-
 ---
 
 ## 🛠 Tech Stack
@@ -236,12 +193,3 @@ This notebook represents the kind of work done in credit risk modeling / fintech
 * CatBoost
 * joblib
 
----
-
-## 👤 Author
-
-**Fares Jony**
-Data Science & Machine Learning
-M.Sc. (Data Science)
-
-If you'd like to discuss credit risk modeling / fraud scoring / underwriting automat
