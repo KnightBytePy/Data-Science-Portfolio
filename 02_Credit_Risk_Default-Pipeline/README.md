@@ -9,7 +9,6 @@ This project builds a machine learning pipeline to estimate the probability that
 * model export for deployment
 
 The final model can be used as the core of an internal credit decisioning tool or scored live via an API / Streamlit app.
-
 ---
 
 ## 🔍 Problem Definition
@@ -28,28 +27,10 @@ In real lending, this type of model is used to:
 * assign customers to manual review / enhanced KYC
 
 ---
-
-## 📂 Repository Structure
-
-```text
-credit-risk-scoring-ml/
-├─ credit_risk_scoring_pipeline.ipynb    # main notebook (full pipeline)
-├─ xgb_model.pkl                         # trained XGBoost model
-├─ feature_columns.pkl                   # feature schema used by the model
-├─ requirements.txt                      # dependencies
-└─ README.md                             # this file
-```
-
-Optional (recommended if you save plots in notebook):
-
-```text
-imgs/
- ├─ class_balance_before_after.png       # SMOTE class distribution plot
- └─ feature_importance_xgb.png           # top drivers of default risk
-```
-
+📂 Data
+This project uses the [Home Credit Default Risk](https://www.kaggle.com/c/home-credit-default-risk/data)
+Download and place it in the `data/` folder before running.
 ---
-
 ## 🧠 Methodology / Pipeline
 
 ### 1. Data Loading & Inspection
