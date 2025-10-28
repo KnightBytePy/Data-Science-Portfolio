@@ -4,6 +4,8 @@
 I built an unsupervised pipeline to segment customers of an online retailer using their transaction history.  
 The output is directly usable by marketing / retention teams to target high-value buyers, re-engage churn risks, and nurture new customers.
 
+--- 
+
 ### Highlights
 - Processed raw invoice-level data and engineered **RFM features**:
   - **Recency** = days since last purchase
@@ -15,10 +17,15 @@ The output is directly usable by marketing / retention teams to target high-valu
 - Interpreted each cluster as a real business persona (e.g. "High-Value Loyalist", "At-Risk Big Spender").
 - Visualized clusters in PCA space and exported labeled customer segments.
 
+---
+
 📂 Data
 This project uses the [Online Retail II UCI](https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci).
 Download and place it in the `data/` folder before running.
 Contains 1,067,371 rows x 8 columns.
+
+---
+
 
 ### Example Segments
 (Your numbers will vary; these are *illustrative* based on `cluster_summary`.)
