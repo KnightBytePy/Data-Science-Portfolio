@@ -19,7 +19,7 @@
 
 | #  | Folder                                                                 | Problem it Solves                                                                 | Highlights                                                                                          | Stack / Methods                                                                                  |
 |----|------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| 01 | `01_Customer_Churn_Prediction_XGBoost_Streamlit`                      | Who is about to leave and how do we keep them?                                   | SMOTE + XGBoost (F1 on churners ≈ 0.93), Streamlit dashboard, what-if retention simulator           | Scikit-Learn, XGBoost, SMOTE, SHAP, Streamlit                                                   |
+| 01 | `01_Customer_Churn_Prediction_XGBoost_Streamlit`                      | Who is about to leave and how do we keep them?                                   | SMOTE + XGBoost (F1 on churners ≈ 0.88), Streamlit dashboard, what-if retention simulator           | Scikit-Learn, XGBoost, SMOTE, SHAP, Streamlit                                                   |
 | 02 | `02_Credit_Risk_Default-Pipeline`                                     | Will this borrower default, and can we explain that decision?                    | Gradient boosted default model, SHAP driver explanations, human-readable risk tiers                | XGBoost / LightGBM, SHAP, Pandas                                                                 |
 | 03 | `03_HybridTimeFusion_Forecasting_LSTM_Prophet_XGBoost`                | How much will each store sell next week?                                         | Hybrid LSTM + Prophet + XGBoost on ~400K+ rows, leakage-safe temporal CV, promo/holiday signals     | Keras (LSTM), Prophet, XGBoost, Pandas, NumPy                                                    |
 | 04 | `04_RFM_OnlineRetail_UnSupervised_Learning`                           | Which customers are high value, discount-driven, or at churn risk?               | RFM feature engineering, unsupervised clustering, customer segmentation for targeting & retention  | RFM scoring, K-Means / clustering, Cohort-style segmentation, Pandas                             |
@@ -35,7 +35,7 @@
 **Goal:** Predict who’s about to churn, and simulate how to save them.  
 **What’s inside:**
 - Data prep, imbalance handling with SMOTE  
-- XGBoost churn classifier with ~0.93 F1 on the churn class  
+- XGBoost churn classifier with ~0.88 F1 on the churn class  
 - SHAP explanations so you can see *why* a customer is high risk  
 - Streamlit dashboard where a non-technical user can test:  
   “What if I offer 10% off?” / “What if I upgrade their plan?”
