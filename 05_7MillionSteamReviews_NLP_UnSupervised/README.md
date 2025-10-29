@@ -28,8 +28,9 @@ This project:
    - Top terms players use,
    - Example raw reviews,
    - Average recommendation score.
+   
   
-   📂 Data
+### 📂 Data
 This project uses the [Steam Review Dataset (2017)](https://zenodo.org/records/1000885).
 Download and place it in the `data/` folder before running.
 Contains 6,417,106 rows x 5 columns.
